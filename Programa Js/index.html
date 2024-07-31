@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Entregas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Registro de Entregas</h1>
+  </header>
+
+  <div class="container">
+    <video id="videoElement" width="320" height="240"></video>
+    <button onclick="capturaFoto()">Capturar Foto</button>
+    <div>
+      <label for="notaFiscal">Número da Nota Fiscal:</label>
+      <input type="text" id="notaFiscal" placeholder="Número da Nota Fiscal">
+    </div>
+    <div>
+      <label for="codigoRastreio">Código de Rastreio:</label>
+      <input type="text" id="codigoRastreio" placeholder="Código de Rastreio">
+    </div>
+    <div>
+      <label for="destinatario">Nome do Destinatário:</label>
+      <input type="text" id="destinatario" placeholder="Nome do Destinatário">
+    </div>
+    <div>
+      <label for="blocoApt">Bloco e Apartamento:</label>
+      <input type="text" id="blocoApt" placeholder="Bloco e Apartamento">
+    </div>
+    <input type="text" id="pesquisaInput" placeholder="Pesquisar por data/hora" oninput="filtrarRegistros()">
+    <div id="registros"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</body>
+</html>
